@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <header>
+        LOJA ECO STORE
+    </header>
+
+    <main>
+
+        <div class="title">
+            <h2>PRODUTOS</h2>
+            <span>Lista de produtos da loja</span>
+        </div>
+
+        <div class="card">
+
+            <div class="lineinput">
+                <label>Produto</label>
+                <input type="text" id="produto" placeholder="Nome">    
+            </div>
+           
+            <div class="lineinput">
+                <label>Preço</label>
+                <input type="number" id="preco" placeholder="R$">  
+            </div>
+
+            <button type="button" onclick="produto.salvar()" id="botaoSalvar">Salvar</button>
+            <button type="button" onclick="produto.cancelar()">Cancelar</button>
+        </div>
+        
+        <div class="content">
+            <table border="1">
+                <thead>  <!--Tag dos titulos da tabela-->
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </thead>
+            <tbody id="tbody" class="center"> <!--Tag corpo da tabela-->
+                
+            </tbody>
+        </table>
+        </div>
+
+    </main>
+
+</body>
+</html>

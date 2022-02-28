@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <button>ADICIONAR</button>
+    
+    <ol class="pessoa">
+        <li>Hudson</li>
+    </ol>
+
+<script>
+
+    /* METODO 1
+
+    let divPessoa = document.querySelector(".pessoa"); //pegando a div do html
+
+    let listaChamada = ["hudson", "vitor", "gui", "ana", "maria", "daniel"];
+
+        for(let i = 0; i < listaChamada.length; i++){
+
+            let item = document.createElement("span"); //criando li pra cada loop do for
+
+            item.innerText = `${listaChamada[i]}, `; //colocando o conteudo da lista dentro das li
+
+            divPessoa.appendChild(item); //colocando a li dentro da div do html
+        }
+
+            console.log(divPessoa);
+
+            /////////////outro metodo
+
+    let ul = document.querySelector(".pessoa"); //prgando a div
+
+    let listaChamada = ["hudson", "vitor", "gui", "ana", "maria", "daniel"];
+
+    for(let i = 0; i < listaChamada.length; i++){
+
+        var lis = document.createElement("li"); //criando li pra cada loop do for
+
+        lis.innerText = `Pessoa: ${listaChamada[i]} `; //colocando o conteudo da lista dentro das li
+
+        ul.appendChild(lis); //colocando a li dentro da div do html
+
+        console.log(ul)
+}
+
+
+// OUTRO METODO - OUVIR EVENTOS - ADD NA LISTA */
+
+const botaoAdd = document.querySelector('button');
+const ulNomes = document.querySelector('ol');
+
+botaoAdd.addEventListener('click', function(){
+
+    const inputConteudo = document.querySelector('input').value;
+    const lis = document.createElement('li');
+     lis.innerText = inputConteudo;
+
+     ulNomes.appendChild(lis);
+
+
+     console.log(ulNomes)
+
+});
+
+/*  
+
+///// OU
+
+// function adicionar(){
+//     let inputConteudo = document.querySelector('input').value;
+//     let ulNomes = document.querySelector('ol');
+
+//     let lis = document.createElement('li');
+//     ulNomes.appendChild(lis);
+
+//     lis.innerText = inputConteudo;
+
+//     console.log(ulNomes)
+
+// }
+*/
+</script> 
+</body>
+</html>
