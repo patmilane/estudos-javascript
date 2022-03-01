@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
+body{
+    background-color: lightblue;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    /* border: 1px solid black; */
+    display: grid;
+    justify-content: center;
+    margin-top: 5%;
+    grid-template-columns: repeat(4, 100px);
+     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.display{
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.212);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
