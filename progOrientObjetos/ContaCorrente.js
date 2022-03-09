@@ -1,5 +1,6 @@
 export class ContaCorrente{
     agencia;
+    cliente;
     _saldo = 0;
 
     sacar(valor){
@@ -17,6 +18,11 @@ export class ContaCorrente{
             de executar caso a condição do if for verdadeiro*/
     
             this._saldo += valor; //se não entrar no if, ele executa isso
+        }
+
+        transferir(valor, conta){
+            const valorSacado = this.sacar(valor); //sacando valor
+            conta.depositar(valorSacado); //deposita-lo em outra conta
         }
     }
 

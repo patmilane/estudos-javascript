@@ -12,9 +12,10 @@ function insertionSort(lista){
             lista[i] = itemAnterior;
             lista[i - 1] = itemAnalise;
 
-            i++;   //se o For estiver i--, aqui é i++
+            i++;   //se o For estiver i--, aqui é i++ 
         }
     }
+
     console.log(lista);
 }
 
