@@ -13,9 +13,11 @@
   "author": "shen",
   "license": "ISC",
   "type": "module",
-
   "bugs": {
     "url": "https://github.com/patmilane/estudos-javascript/issues"
   },
-  "homepage": "https://github.com/patmilane/estudos-javascript#readme"
+  "homepage": "https://github.com/patmilane/estudos-javascript#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

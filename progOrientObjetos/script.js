@@ -3,33 +3,24 @@
 import {Cliente} from "./Cliente.js";
 import {ContaCorrente} from "./ContaCorrente.js"; //importando as classe
 
-const cliente1 = new Cliente(); //1 2
-cliente1.nome = "Pati";
-cliente1.cpf = 545645334634;
+const cliente1 = new Cliente("pati", 11254684555); //1 2
 
-const contaCorrentePati = new ContaCorrente();
-contaCorrentePati.agencia = 1001;
+
+const contaCorrentePati = new ContaCorrente(1002, cliente1);
+numeroDeContas++;
 contaCorrentePati.depositar(200);
-contaCorrentePati.depositar(500);
-
-// console.log("valor sacado: " + valorSacado);
 
 contaCorrentePati.cliente = cliente1;
-
 console.log(contaCorrentePati);
 
-const cliente2 = new Cliente(); 
-cliente2.nome = "Alice";
-cliente2.cpf = 564558774654;
+const cliente2 = new Cliente("Alice", 564558774654); 
+const contaCorrenteAlice = new ContaCorrente(1001, cliente2); //criando conta alice
+numeroDeContas++;
 
-const contaCorrenteAlice = new ContaCorrente(); //criando conta alice
-contaCorrenteAlice.cliente = cliente2;
-contaCorrenteAlice.agencia = 102;
+let valor = 200;
+contaCorrentePati.transferir(valor, contaCorrenteAlice); //transferindo pra alice
 
-contaCorrentePati.transferir(300, contaCorrenteAlice); //transferindo pra alice
-
-
-console.log(contaCorrenteAlice);
+console.log(cliente1.cpf);
 
 
 /* 1- criando uma variavel para acessar o cliente */
